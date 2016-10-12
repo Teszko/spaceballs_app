@@ -1,0 +1,3 @@
+[submodule "spaceballs"]
+	path = spaceballs
+	url = https://github.com/Teszko/spaceballs
