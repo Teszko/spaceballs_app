@@ -6,6 +6,7 @@ ELECTRON_ARCHIVE=electron-v1.4.3-linux-x64.zip
 #extract electron binary. has to be done on first run.
 if [ -e "$S_PATH/electron/$ELECTRON_ARCHIVE" ]
 then
+	mkdir -p $S_PATH/electron/bin
 	unzip $S_PATH/electron/$ELECTRON_ARCHIVE -d $S_PATH/electron/bin/
 	rm $S_PATH/electron/$ELECTRON_ARCHIVE
 fi
