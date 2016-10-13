@@ -1,0 +1,13 @@
+#!/bin/bash
+
+S_PATH="${BASH_SOURCE%/*}"
+ELECTRON_ARCHIVE=electron-v1.4.3-linux-x64.zip
+
+#extract electron binary. has to be done on first run.
+if [ -e "$S_PATH/electron/$ELECTRON_ARCHIVE" ]
+then
+	unzip $S_PATH/electron/$ELECTRON_ARCHIVE -d $S_PATH/electron/bin/
+	rm $S_PATH/electron/$ELECTRON_ARCHIVE
+fi
+
+./electron/bin/electron ./
